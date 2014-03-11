@@ -118,6 +118,7 @@ class AmazonCall(object):
             socket.setdefaulttimeout(self.Timeout)
         logger.debug("Amazon URL: %s" % api_string)
         response = urllib2.urlopen(api_request)
+        time.sleep(1.5)
         if self.Timeout:
             socket.setdefaulttimeout(None)
 
